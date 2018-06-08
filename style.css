@@ -17,3 +17,7 @@ ul {
 ul li {
 	padding: 1rem 0;
 }
+
+.done {
+	text-decoration: line-through;
+}

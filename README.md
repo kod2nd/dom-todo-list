@@ -31,3 +31,4 @@
 
 - Bonus: Allow user to create a todo when they press the <kbd>Enter</kbd> key
 
+Additional... make one for delete

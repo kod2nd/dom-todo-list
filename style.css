@@ -7,17 +7,47 @@ body {
 	margin: 0 auto;
 	max-width: 700px;
 	min-height: 100vh;
-	padding: 4rem;
+	padding:  4rem;
+	background: beige;
 }
 
 ul {
 	padding: 0;
+	padding-left: 4rem;
 }
 
 ul li {
 	padding: 1rem 0;
+	
+}
+
+ul li:hover{
+	color: tomato;
 }
 
 .done {
 	text-decoration: line-through;
+	color: lightgrey
+}
+
+
+
+button{
+	margin: 0 5px;
+	padding: 5px 10px;
+	background: red;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	vertical-align: middle;
+
+}
+
+#newTask{
+	background: green
+}
+
+input{
+	font-size: 20px;
+	vertical-align: middle
 }

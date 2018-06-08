@@ -49,6 +49,16 @@ textBox.placeholder = "Enter a new task";
 // Insert before the JavaScript
 document.body.insertBefore(textBox, document.querySelector('script'))
 
+// const detectEnterKey = (event) => {
+// 	console.log(event.key)
+
+
+// If user presses an enter Key
+textBox.addEventListener("keydown", (e) => {
+	if (e.keyCode === 13 && textBox.value !== ''){
+	addInputToList()}
+  });
+
 // Add a button
 
 const addInputToList = () => {
@@ -64,6 +74,8 @@ addToListButton.textContent = "Add New Task";
 addToListButton.addEventListener('click',addInputToList);
 // Insert before the JavaScript
 document.body.insertBefore(addToListButton, document.querySelector('script'));
+
+
 
 
 

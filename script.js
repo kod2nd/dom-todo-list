@@ -93,11 +93,27 @@ textBox.addEventListener("keydown", (e) => {
 // remove them
 const clearStriked = () => {
 	const doneItemsArray = document.querySelectorAll('.done');
-	console.log(doneItemsArray);
 
 	const removeElement = () => {document.querySelector('.done').remove()};
-	// const logger = (element) => {console.log(element)};
+
 	doneItemsArray.forEach(removeElement)
+
+	// ============ Extra =========
+
+// if there are no items on the list. Tell the use that he or she can add items using the text box.
+
+const allListsArray = document.querySelectorAll('li');
+console.log(allListsArray)
+
+if (allListsArray.length === 0) {
+	// add a h2 above the input box
+	const emptyListMessage = document.createElement('h5');
+	emptyListMessage.textContent = ("You have no items on your To-Do list! \nUse the textbox below to add items to the list.");
+	// insert the message above the textbox
+	document.body.insertBefore(emptyListMessage, document.querySelector('input'));
+
+}
+
 }
 
 // When the button is pressed, run clearStriked Function
@@ -106,6 +122,8 @@ clearButton.textContent = "Clear Done Items";
 clearButton.addEventListener('click', clearStriked);
 
 document.body.insertBefore(clearButton, document.querySelector('script'));
+
+
 
 
 

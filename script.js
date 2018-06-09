@@ -70,6 +70,7 @@ const addInputToList = () => {
 	// reset the value to blank
 	userInput.value = ''
 
+	//May need to rewrite this code. Its purpose is to detect if a list is present. remove the h5 message.
 	if (document.querySelector('li').textContent !== ""){
 		document.querySelector('h5').remove();
 	}

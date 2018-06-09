@@ -60,10 +60,19 @@ document.body.insertBefore(textBox, document.querySelector('script'))
 const addInputToList = () => {
 	// Take value from input box
 	const userInput = document.querySelector('input');
-	// Take the value of the input and add it to a list. Recall the append function/
-	appendTodoList(userInput.value);
+	// Take the value of the input and add it to a list if the textbox is not blank. Recall the append function. If blank, alert the user/
+	if (userInput.value.trim() === ''){
+		alert("You cannot add an empty task!\nPlease enter and item into the text box.")
+	} else{
+		appendTodoList(userInput.value);
+	}
+	
 	// reset the value to blank
 	userInput.value = ''
+
+	if (document.querySelector('li').textContent !== ""){
+		document.querySelector('h5').remove();
+	}
 
 }
 
@@ -108,7 +117,7 @@ console.log(allListsArray)
 if (allListsArray.length === 0) {
 	// add a h2 above the input box
 	const emptyListMessage = document.createElement('h5');
-	emptyListMessage.textContent = ("You have no items on your To-Do list! \nUse the textbox below to add items to the list.");
+	emptyListMessage.textContent = ("You have no items on your To-Do list!\nUse the textbox below to add items to the list.");
 	// insert the message above the textbox
 	document.body.insertBefore(emptyListMessage, document.querySelector('input'));
 

@@ -126,12 +126,35 @@ if (allListsArray.length === 0) {
 
 }
 
+
+
 // When the button is pressed, run clearStriked Function
 const clearButton = document.createElement('button');
 clearButton.textContent = "Clear Done Items";
 clearButton.addEventListener('click', clearStriked);
 
 document.body.insertBefore(clearButton, document.querySelector('script'));
+
+// =========== Insert Instructions =============
+
+// Write a help message. Create a function to call the help message.
+
+const helpButtonPress = () => {
+	return alert("Hello, welcome to your To-Do list!\n\nADDING TAKS:\n- To add a new task, enter the task into the textbox and press Enter or Click the 'Add New Task' button\n\nCOMPLETED TASKS:\n- Once you have completed your task, click on the task in the list to strike it off.\n\nCLEAR COMPLETED TASKS:\n- You can also clear all striked tasks by clicking the 'Clear Done Items' button.")
+}
+
+// Add a button
+
+const instructionButton = document.createElement('button');
+instructionButton.textContent = "Help";
+instructionButton.id = "help";
+instructionButton.addEventListener('click', helpButtonPress);
+
+document.body.insertBefore(instructionButton, document.querySelector('ul'));
+
+
+
+
 
 
 
